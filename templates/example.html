@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кривошеев М.С., Гавра В.А.</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+    <header> 
+        WEB-прогрмирование, часть 2. {% if lab_num %}Лабораторная работа 2{% endif %}
+    </header>
+
+    <main> 
+        <br> 5 + 2 = {{5 + 2}}
+        <br> 11 x 28 = {{11 * 28}} 
+        <br> 8452 / 793= {{8452/793}}
+        <br> 4 ** 8 = {{4 ** 8}}
+
+    <ul>
+        {% for f in fruits %}
+        <li>{{ f.name }}: {{ f.price }} &#x20bd;</li>
+        {% endfor %}
+    </ul>
+
+    <ul>
+        {% for f in books %}
+        <li>{{ f.name }}: {{ f.price }} &#x20bd;</li>
+        {% endfor %}
+    </ul>
+    
+   </main>
+    
+    <footer>
+        &copy; 
+        {% if name %}
+            {{name}},
+        {% else %}
+            Анонимус,
+        {% endif %}
+        {{lab_num}},
+        {{group}},
+        {{course}}
+        2023
+
+    </footer>
+</body>
+</html>

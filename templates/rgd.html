@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block lab %}Лабораторная работа 3{% endblock %}
+
+{% block main %}
+<h1>Покупка РЖД билета</h1>
+
+<form>
+<label>Ваше ФИО</label>
+<div>
+    <input type="text" name="pocypatel" value="{{ pocypatel or '' }}">
+    {{ errors.pocypatel }}
+</div>
+
+<label>Тип вашего билета</label>
+<div>
+    <select name="tip">
+        <option value="kid" {{tip == 'kid' and 'selected' }}>детский</option>
+        <option value="star" {{tip == 'star' and 'selected' }}>взрослый</option>
+    </select>
+</div>
+
+<label>Полка</label>
+<div>
+    <select name="polc">
+        <option value="nig" {{polc == 'nig' and 'selected' }}>нижняя</option>
+        <option value="verx" {{polc == 'verx' and 'selected' }}>верхняя</option>
+        <option value="verxboc" {{polc == 'verxboc' and 'selected' }}>верхняя боковая</option>
+        <option value="nigboc" {{polc == 'nigboc' and 'selected' }}>нижняя боковая</option>
+    </select>
+</div>
+
+<label>Будет ли у вас багаж?</label>
+<div>
+    <select name="bag">
+        <option value="es" {{bag == 'es' and 'selected' }}>да</option>
+        <option value="no" {{bag == 'no' and 'selected' }}>нет</option>
+    </select>
+</div>
+
+<label>Ваш возраст</label>
+<div>
+    <input type="number" name="fre" value="{{ fre or '' }}">
+    {{ errors.fre }}
+</div>
+
+<label>пункт выезда</label>
+<div>
+    <input type="text" name="viezd" value="{{ viezd or '' }}">
+    {{ errors.viezd }}
+</div>
+
+<label>пункт приезда</label>
+<div>
+    <input type="text" name="priezd" value="{{ priezd or '' }}">
+    {{ errors.priezd }}
+</div>
+
+<label>дата поездки</label>
+<div>
+    <input type="number" name="data" value="{{ data or '' }}" >
+    {{ errors.data }}
+</div>
+
+<div>
+    <button type="submit">купить</button>
+</div>
+
+</form>
+{% endblock %}
