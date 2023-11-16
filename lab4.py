@@ -7,6 +7,7 @@ def lab():
     return render_template('lab4.html')
 
 
+
 @lab4.route('/lab4/login', methods=['GET','POST'])
 def login():
     if request.method == 'GET':
