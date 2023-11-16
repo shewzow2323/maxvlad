@@ -10,7 +10,7 @@ def lab():
 @lab4.route('/lab4/login', methods=['GET','POST'])
 def login():
     if request.method == 'GET':
-        return render_template('4_login.html')
+        return render_template('login.html')
 
     username = request.form.get('username')
     password = request.form.get('password')
