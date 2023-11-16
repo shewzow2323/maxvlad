@@ -103,7 +103,7 @@ def corn():
             price = 14000 * weight * sale
 
         if (weight > 0) and (501 > weight):
-                return render_template('4_success_corn.html',corn=corn,weight=weight,price=price,message=message)
+                return render_template('successcorn.html',corn=corn,weight=weight,price=price,message=message)
         #Ошибки
         if weight < 0 or weight == 0:
             error = 'Неверное значение веса'
