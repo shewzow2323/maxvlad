@@ -16,7 +16,7 @@ def login():
     username = request.form.get('username')
     password = request.form.get('password')
 
-    if username == 'ershtrub' and password == '555':
+    if username == 'Максим Кривошеев' and password == '1234':
         return render_template('uccess.html',username=username)
     
     error = ''
