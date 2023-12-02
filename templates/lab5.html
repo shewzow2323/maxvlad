@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block lab %}Лабораторная работа 5{% endblock %}
+
+{% block main %}
+
+    <h1>Главная страница лабораторной работы</h1> 
+   
+    <p><div style="font-size: larger; margin-left: 10px;">
+      Имя пользователя:
+      {% if user %}
+      {{ user }}
+      {% else %}  
+      Анон{% endif %}
+  </p></div>
+      
+  
+        <a href="lab5/note" class="custom-button">Просмотр заметок</a>
+        <a href="/user_dashboard" class="custom-button">Создать заметоку</a>
+        <a href="/lab5/login5" class="custom-button">Авторизация</a>
+        <a href="/lab5/register" class="custom-button">Регистрация</a>
+
+        
+    </ul>
+    
+{% endblock %}

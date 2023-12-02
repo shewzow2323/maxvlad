@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block lab %}Лабораторная работа 5{% endblock %}
+
+{% block main %}
+
+    <h1>Главная страница лабораторной работы</h1> 
+   
+    <p><div style="font-size: larger; margin-left: 10px;">
+      Имя пользователя:
+      {% if user %}
+      {{ user }}
+      {% else %}  
+      Анон{% endif %}
+  </p></div>
+      
+  
+        <a href="/note" class="custom-button">Просмотр заметок</a>
+        <a href="/user_dashboard" class="custom-button">Создать заметоку</a>
+        
+        <div>
+          <h1>Новая заметка</h1>
+          <form method="POST">
+          <input name="title_article" type="text" placeholder="Название статьи">
+          <textarea name = "text_article" placeholder="Текст статьи" rows="20">
+          </textarea>
+          <input type="submit" value="Apply"/>
+          </form>
+        </div>
+        
+    </ul>
+    
+{% endblock %}
